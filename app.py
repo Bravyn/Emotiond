@@ -18,10 +18,7 @@ def init():
     chat_id = incoming_text.message.chat_id
     msg_id = incoming_text.message.message_id
 
-    text = incoming_text.message
-    .text
-    .encode('utf-8')
-    .decode()
+    text = incoming_text.message.text.encode('utf-8').decode()
 
     if text == "/init":
         hello = """Hello,
@@ -39,8 +36,7 @@ def init():
             #clean received text to remove non-alphabets
             text = re.sub(r"\W", "_", text)
             #api for fetching from cool avatars
-            url = "https://api.hello-avatar.com/adorables/{}"
-            .format(text.strip())
+            url = "https://api.hello-avatar.com/adorables/{}".format(text.strip())
 
             bot.sendPhoto(
                chat_id = chat_id,
@@ -57,8 +53,7 @@ def init():
 
 @app.route('/star', methods = ['GET', 'POST'])
 def set_webhook():
-    hooky = bot.setWebhook('{URL}{HOOK}'
-    .format(URL = URL, HOOK = TOKEN))
+    hooky = bot.setWebhook('{URL}{HOOK}'.format(URL = URL, HOOK = TOKEN))
 
     if s:
         return "webhook ok"
