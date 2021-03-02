@@ -57,7 +57,7 @@ def init():
         )
     return 'ok'
 
-@app.route('/set_webhook', methods = ['GET', 'POST'])
+@app.route('/star', methods = ['GET', 'POST'])
 def set_webhook():
     hooky = bot.setWebhook('{URL}{HOOK}'
     .format(URL = URL, HOOK = TOKEN))
