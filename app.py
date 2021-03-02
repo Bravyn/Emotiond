@@ -55,7 +55,7 @@ def init():
 def set_webhook():
     hooky = bot.setWebhook('{URL}{HOOK}'.format(URL = URL, HOOK = TOKEN))
 
-    if s:
+    if hooky:
         return "webhook ok"
     else:
         return "webhook !ok"
