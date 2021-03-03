@@ -1,0 +1,1 @@
+https://api.hello-avatar.com/adorables/{}

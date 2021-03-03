@@ -39,7 +39,7 @@ def init():
             #clean received text to remove non-alphabets
             text = re.sub(r"\W", "_", text)
             #api for fetching from cool avatars
-            url = "https://api.hello-avatar.com/adorables/{}".format(text.strip())
+            url = "https://logo.clearbit.com/{}".format(text.strip())
 
             bot.sendPhoto(
                chat_id = chat_id,
