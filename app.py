@@ -21,7 +21,7 @@ def init():
     
     text = incoming_text.message.text
     if text != None:
-        text = incoming_text.message.textencode('utf-8').decode()
+        text = incoming_text.message.text.encode('utf-8').decode()
   
     if text == "init":
         hello = """Hello,
