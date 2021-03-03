@@ -22,7 +22,8 @@ def init():
     text = incoming_text.message.text
     if text != None:
         text = incoming_text.message.text.encode('utf-8').decode()
-  
+    else:
+        text = "segment.com"
     if text == "init":
         hello = """Hello,
         I am emotiond,
