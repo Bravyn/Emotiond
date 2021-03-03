@@ -14,16 +14,15 @@ app = Flask(__name__)
 @app.route('/{}'.format(TOKEN), methods=['POST'])
 def init():
     incoming_text = telegram.Update.de_json(request.get_json(force = True), bot)
-    
-    chat_id = incoming_text.message.chat_id
-    msg_id = incoming_text.message.message_id
+    if incoming_text:
+        chat_id = incoming_text.message.chat_id
+        msg_id = incoming_text.message.message_id
 
     
     text = incoming_text.message.text
     if text != None:
         text = incoming_text.message.text.encode('utf-8').decode()
-    else:
-        text = "segment.com"
+    
     if text == "init":
         hello = """Hello,
         I am emotiond,
