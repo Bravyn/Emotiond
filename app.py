@@ -20,7 +20,7 @@ def init():
 
     text = incoming_text.message.text.encode('utf-8').decode()
 
-    if text == "/init":
+    if text == "init":
         hello = """Hello,
         I am emotiond,
         At your service.
